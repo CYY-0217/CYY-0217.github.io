@@ -10,6 +10,9 @@
 body {
   overflow-x: hidden;
 }
+body * {
+  letter-spacing: 0 !important;
+}
 .header {
   background: rgba(247, 243, 236, 0.94);
   border-color: #cdc8be;
@@ -20,27 +23,25 @@ body {
   font-family: Georgia, serif;
 }
 .editorial-hero {
-  min-height: calc(100vh - 76px);
+  min-height: 690px;
   display: grid;
-  grid-template-columns: 54px 1.15fr 0.85fr;
-  gap: 36px;
-  align-items: center;
-  padding-block: 54px;
+  grid-template-columns: 42px minmax(0, 1.2fr) minmax(340px, 0.8fr);
+  gap: 40px;
+  align-items: stretch;
+  padding-block: 64px;
 }
 .hero-number {
-  align-self: start;
-  padding-top: 24px;
+  padding-top: 6px;
   writing-mode: vertical-rl;
   font: 700 11px Georgia;
   color: var(--wine);
-  letter-spacing: 0.18em;
+}
+.hero-main {
+  align-self: center;
 }
 .hero-main h1 {
-  font:
-    700 clamp(78px, 10vw, 144px) / 0.82 Georgia,
-    "Songti SC",
-    serif;
-  margin: 22px 0 30px;
+  font: 700 112px/0.86 Georgia, "Songti SC", serif;
+  margin: 24px 0 32px;
   color: var(--charcoal);
 }
 .hero-degree {
@@ -58,55 +59,61 @@ body {
   max-width: 700px;
   margin-top: 28px;
 }
-.hero-collage {
-  position: relative;
-  padding: 22px 18px 70px 0;
+.hero-profile {
+  align-self: center;
+  border-top: 6px solid var(--wine);
+  border-bottom: 1px solid #b8b3aa;
+  background: #e7ebe6;
 }
-.hero-photo {
+.profile-heading {
+  min-height: 82px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid #b8b3aa;
+}
+.profile-heading span,
+.profile-focus small {
+  font: 700 10px/1.2 Georgia, serif;
+  color: var(--wine);
+}
+.profile-heading b {
+  font: 700 20px/1.2 Georgia, "Songti SC", serif;
+}
+.profile-intro {
   margin: 0;
-  transform: rotate(1.7deg);
-  box-shadow: 16px 18px 0 #d9ded8;
+  padding: 28px 24px 30px;
+  font: 600 17px/1.85 Georgia, "Noto Serif SC", serif;
 }
-.hero-photo img {
-  width: 100%;
-  aspect-ratio: 1.25;
-  object-fit: contain;
-  background: #fff;
+.profile-focus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #b8b3aa;
+  border-bottom: 1px solid #b8b3aa;
 }
-.hero-photo figcaption {
-  font: 700 10px/1 Georgia;
-  padding: 10px 0;
-  letter-spacing: 0.12em;
+.profile-focus div {
+  min-height: 112px;
+  padding: 20px 24px;
 }
-.issue-stamp {
-  position: absolute;
-  right: -15px;
-  bottom: 12px;
-  width: 150px;
-  background: var(--wine);
-  color: #fff;
-  padding: 20px;
-  transform: rotate(-3deg);
+.profile-focus div + div {
+  border-left: 1px solid #b8b3aa;
 }
-.issue-stamp b {
-  font: 700 28px/0.9 Georgia;
-}
-.issue-stamp span {
+.profile-focus strong {
   display: block;
-  font-size: 11px;
-  margin-top: 14px;
-  line-height: 1.5;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.6;
 }
-.margin-note {
-  position: absolute;
-  left: -38px;
-  bottom: 2px;
-  width: 180px;
+.profile-note {
+  margin: 0;
+  padding: 20px 24px;
   background: var(--sky);
   color: #fff;
-  padding: 14px;
-  font: 600 11px/1.6 Georgia;
-  transform: rotate(2deg);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
 }
 .manifesto {
   border-block: 1px solid #b8b3aa;
@@ -114,10 +121,11 @@ body {
 }
 .manifesto .wrap {
   min-height: 74px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 24px;
 }
 .manifesto span {
   font-weight: 800;
@@ -142,10 +150,7 @@ body {
 }
 .mag-head h2,
 .review-title h2 {
-  font:
-    700 clamp(43px, 5vw, 72px) / 1.02 Georgia,
-    "Songti SC",
-    serif;
+  font: 700 64px/1.02 Georgia, "Songti SC", serif;
   margin: 0;
 }
 .mag-head h2 em,
@@ -159,14 +164,16 @@ body {
 }
 .editorial-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 .story {
-  position: relative;
   border: 1px solid #cfcac1;
   background: var(--cream);
   overflow: hidden;
+  display: grid;
+  grid-template-rows: 300px 1fr;
+  min-height: 520px;
 }
 .story figure {
   margin: 0;
@@ -181,8 +188,15 @@ body {
 .story:hover figure img {
   transform: scale(1.025);
 }
+.story-fusion figure img {
+  object-fit: contain;
+  background: #fff;
+}
 .story > div {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .story small {
   font: 700 10px Georgia;
@@ -200,49 +214,36 @@ body {
   font-size: 13px;
   line-height: 1.7;
   color: #69706c;
+  margin-bottom: 22px;
 }
 .story b {
   font-size: 11px;
   color: var(--wine);
-}
-.story-fusion {
-  grid-column: span 7;
-}
-.story-fusion figure {
-  height: 365px;
+  margin-top: auto;
 }
 .story-spend {
-  grid-column: span 5;
   background: #dfe5e8;
 }
-.story-spend figure {
-  height: 275px;
-}
 .story-travel {
-  grid-column: span 8;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
   background: #dce3dc;
 }
-.story-travel figure {
-  min-height: 340px;
-}
 .story-discipline {
-  grid-column: span 4;
+  background: #e7ddd3;
+}
+.number-visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 26px;
   background: var(--lilac);
   color: #fff;
-  min-height: 340px;
 }
-.story-discipline p,
-.story-discipline b {
-  color: #fff;
+.number-visual span {
+  font: 700 150px/0.78 Georgia, serif;
 }
-.giant-no {
-  position: absolute;
-  right: -9px;
-  bottom: -32px;
-  font: 700 150px/1 Georgia;
-  color: rgba(255, 255, 255, 0.18);
+.number-visual small {
+  padding-bottom: 4px;
+  font: 700 12px/1 Georgia, serif;
 }
 .method-band {
   background: var(--charcoal);
@@ -293,7 +294,7 @@ body {
   background: var(--wine);
   color: #fff;
   padding: 38px;
-  transform: rotate(-1deg);
+  border-top: 6px solid var(--butter);
 }
 .review-lead span {
   font: 700 12px Georgia;
@@ -392,12 +393,14 @@ body {
   .editorial-hero {
     grid-template-columns: 1fr;
     padding-top: 44px;
+    min-height: auto;
+    gap: 32px;
   }
   .hero-number {
     display: none;
   }
   .hero-main h1 {
-    font-size: 76px;
+    font-size: 68px;
   }
   .hero-degree {
     line-height: 1.6;
@@ -405,15 +408,8 @@ body {
   .hero-statement {
     font-size: 17px;
   }
-  .hero-collage {
-    margin-top: 18px;
-  }
-  .margin-note {
-    left: -4px;
-  }
-  .issue-stamp {
-    right: 0;
-    transform: none;
+  .hero-profile {
+    align-self: stretch;
   }
   .mag-head,
   .review-title,
@@ -423,19 +419,19 @@ body {
   .mag-head h2,
   .review-title h2 {
     margin: 18px 0;
+    font-size: 44px;
   }
   .editorial-grid {
     display: block;
   }
   .story {
-    display: block !important;
+    display: grid !important;
+    grid-template-rows: 240px 1fr;
+    min-height: 470px;
     margin-bottom: 18px;
   }
   .story figure {
-    height: 250px !important;
-  }
-  .story-discipline {
-    min-height: 300px;
+    height: auto !important;
   }
   .method-steps {
     grid-template-columns: 1fr 1fr;
@@ -451,15 +447,19 @@ body {
     margin-bottom: 16px;
   }
   .review-lead {
-    transform: none;
     margin-bottom: 30px;
   }
   .review-list article {
     grid-template-columns: 100px 1fr;
   }
   .manifesto .wrap {
-    overflow-x: auto;
-    justify-content: flex-start;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding-block: 12px;
+  }
+  .manifesto span,
+  .manifesto i {
+    padding: 8px 0;
   }
   .identity-strip .wrap {
     overflow-x: auto;
@@ -467,5 +467,23 @@ body {
   .contact-links {
     text-align: left;
     margin-top: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-main h1 {
+    font-size: 54px;
+  }
+  .hero-degree {
+    display: block;
+  }
+  .profile-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .profile-focus div {
+    padding: 18px;
+  }
+  .number-visual span {
+    font-size: 118px;
   }
 }
