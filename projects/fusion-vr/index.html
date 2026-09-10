@@ -1,1 +1,158 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>智探新能｜陈韵韵作品集</title><link rel="stylesheet" href="../../styles.css"></head><body><header class="header"><div class="wrap"><a class="brand" href="../../"><span class="mark">陈</span><span><strong>陈韵韵</strong><small>Nuclear · Math · AI</small></span></a><nav class="nav"><a href="../../#projects">项目</a><a href="../../#skills">能力</a><a href="../../#experience">经历</a></nav><a class="github" href="https://github.com/CYY-0217/VR_project" target="_blank">源代码 ↗</a></div></header><main><section class="detail-hero wrap"><a class="back" href="../../">← 返回首页</a><span class="kicker" style="display:block;margin-top:45px">01 · 数字孪生 / XR 交互 / 聚变工程</span><h1>智探新能<br>聚变托卡马克 VR 系统</h1><p class="summary">以环流三号为背景，把 PINNs 轻量预测、科学数据与沉浸式交互组织成可以在 Meta Quest 3 上运行和验证的系统。</p><div class="role-strip"><small>我的职责</small><strong>三层系统架构设计；Unity 3D 与 Meta Quest 3 交互实现；壳体透视、装配体变换、部件解构、图表交互与异常触觉反馈。</strong></div></section><div class="detail-visual"><div class="architecture-art"><div class="rings"><b>HL-3 · PINNs · XR</b></div></div></div><div class="content-grid wrap"><nav class="toc"><a href="#problem">01 系统问题</a><a href="#architecture">02 系统架构</a><a href="#work">03 我的工作</a><a href="#evidence">04 证据与边界</a></nav><article class="article"><section id="problem"><span class="num">01</span><h2>系统问题</h2><p>聚变实验涉及高维诊断数据、物理预测与复杂装置结构。传统二维界面很难让观察者同时理解“数据发生在哪里”“装置怎样构成”以及“异常意味着什么”。项目需要在保留物理信息的同时，把结果转译为可以观察、操作和预警的沉浸式体验。</p><p><strong>系统目标：</strong>在 VR 中透视托卡马克内部等离子体演化，调用不同诊断点的数据图表，并通过视觉与触觉反馈提示异常工况。</p></section><section id="architecture"><span class="num">02</span><h2>三层系统架构</h2><p>我提出“AI 推理层—数据通信层—VR 可视化层”的分层结构，让模型输出、数据传递与交互呈现保持清晰边界，便于独立迭代。</p><div class="flow"><div>AI 推理层<br><small>PINNs 物理约束预测</small></div><i>→</i><div>数据通信层<br><small>预测结果与诊断数据映射</small></div><i>→</i><div>VR 可视化层<br><small>Unity 场景与 Quest 3 交互</small></div></div><p>系统方案将 PINNs 作为整体项目的预测基础：把 Grad-Shafranov 等物理约束嵌入损失函数，以神经网络前向推理替代部分高成本迭代求解。我的主要工作集中在架构组织和 VR 可视化交互落地。</p></section><section id="work"><span class="num">03</span><h2>我的工作</h2><ol><li><strong>装置透视与空间理解：</strong>实现壳体 XR 透视效果，使用户能够穿过外壳观察内部等离子体演化。</li><li><strong>装配体空间操作：</strong>设计平移、旋转与等比缩放控制，并处理模型层级、碰撞体与交互点之间的输入冲突。</li><li><strong>部件级解构：</strong>基于 XR Interaction Toolkit 实现抓取、移动与拆分，支持独立观察装置部件。</li><li><strong>诊断数据交互：</strong>点击交互点生成对应数据图表，设计图表关闭与多图管理流程。</li><li><strong>异常反馈闭环：</strong>在异常工况下联动视觉红光闪烁和手柄震动，让数据异常转化为即时体感提示。</li></ol><div class="evidence"><div><b>Unity 3D</b><span>场景、装配体与交互逻辑</span></div><div><b>XR Interaction Toolkit</b><span>抓取、移动、拆分与手柄输入</span></div><div><b>Meta Quest 3</b><span>VR 真机交互目标平台</span></div></div></section><section id="evidence"><span class="num">04</span><h2>公开证据与边界</h2><p>GitHub 仓库公开了 `ChartController`、`InteractPoint`、`SimpleVRHandController` 等交互脚本，可验证图表控制、交互点与 VR 手柄相关实现。</p><div class="actions"><a class="btn" href="https://github.com/CYY-0217/VR_project" target="_blank">查看 VR_project 仓库 ↗</a></div><p><strong>边界说明：</strong>本页基于个人工作总结和开发步骤记录整理。PINNs 的性能与节能论证属于项目整体方案；未将全部模型研发归为个人贡献。完整 Unity 工程、实验资产与获奖证书尚未公开。</p></section></article></div></main><footer class="footer"><div class="wrap">陈韵韵 · Selected Project 01</div></footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>智探新能｜陈韵韵作品集</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrap">
+        <a class="brand" href="../../"
+          ><span class="mark">陈</span
+          ><span
+            ><strong>陈韵韵</strong><small>Nuclear · Math · AI</small></span
+          ></a
+        >
+        <nav class="nav">
+          <a href="../../#projects">项目</a><a href="../../#skills">能力</a
+          ><a href="../../#experience">经历</a>
+        </nav>
+        <a
+          class="github"
+          href="https://github.com/CYY-0217/VR_project"
+          target="_blank"
+          >源代码 ↗</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="detail-hero wrap">
+        <a class="back" href="../../">← 返回首页</a
+        ><span class="kicker" style="display: block; margin-top: 45px"
+          >01 · 数字孪生 / XR 交互 / 聚变工程</span
+        >
+        <h1>智探新能<br />聚变托卡马克 VR 系统</h1>
+        <p class="summary">
+          以环流三号为背景，把 PINNs 轻量预测、科学数据与沉浸式交互组织成可以在
+          Meta Quest 3 上运行和验证的系统。
+        </p>
+        <div class="role-strip">
+          <small>我的职责</small
+          ><strong
+            >三层系统架构设计；Unity 3D 与 Meta Quest 3
+            交互实现；壳体透视、装配体变换、部件解构、图表交互与异常触觉反馈。</strong
+          >
+        </div>
+      </section>
+      <div class="detail-visual">
+        <div class="architecture-art">
+          <div class="rings"><b>HL-3 · PINNs · XR</b></div>
+        </div>
+      </div>
+      <div class="content-grid wrap">
+        <nav class="toc">
+          <a href="#problem">01 系统问题</a
+          ><a href="#architecture">02 系统架构</a><a href="#work">03 我的工作</a
+          ><a href="#evidence">04 证据与边界</a>
+        </nav>
+        <article class="article">
+          <section id="problem">
+            <span class="num">01</span>
+            <h2>系统问题</h2>
+            <p>
+              聚变实验涉及高维诊断数据、物理预测与复杂装置结构。传统二维界面很难让观察者同时理解“数据发生在哪里”“装置怎样构成”以及“异常意味着什么”。项目需要在保留物理信息的同时，把结果转译为可以观察、操作和预警的沉浸式体验。
+            </p>
+            <p>
+              <strong>系统目标：</strong>在 VR
+              中透视托卡马克内部等离子体演化，调用不同诊断点的数据图表，并通过视觉与触觉反馈提示异常工况。
+            </p>
+          </section>
+          <section id="architecture">
+            <span class="num">02</span>
+            <h2>三层系统架构</h2>
+            <p>
+              我提出“AI 推理层—数据通信层—VR
+              可视化层”的分层结构，让模型输出、数据传递与交互呈现保持清晰边界，便于独立迭代。
+            </p>
+            <div class="flow">
+              <div>AI 推理层<br /><small>PINNs 物理约束预测</small></div>
+              <i>→</i>
+              <div>数据通信层<br /><small>预测结果与诊断数据映射</small></div>
+              <i>→</i>
+              <div>
+                VR 可视化层<br /><small>Unity 场景与 Quest 3 交互</small>
+              </div>
+            </div>
+            <p>
+              系统方案将 PINNs 作为整体项目的预测基础：把 Grad-Shafranov
+              等物理约束嵌入损失函数，以神经网络前向推理替代部分高成本迭代求解。我的主要工作集中在架构组织和
+              VR 可视化交互落地。
+            </p>
+          </section>
+          <section id="work">
+            <span class="num">03</span>
+            <h2>我的工作</h2>
+            <ol>
+              <li>
+                <strong>装置透视与空间理解：</strong>实现壳体 XR
+                透视效果，使用户能够穿过外壳观察内部等离子体演化。
+              </li>
+              <li>
+                <strong>装配体空间操作：</strong
+                >设计平移、旋转与等比缩放控制，并处理模型层级、碰撞体与交互点之间的输入冲突。
+              </li>
+              <li>
+                <strong>部件级解构：</strong>基于 XR Interaction Toolkit
+                实现抓取、移动与拆分，支持独立观察装置部件。
+              </li>
+              <li>
+                <strong>诊断数据交互：</strong
+                >点击交互点生成对应数据图表，设计图表关闭与多图管理流程。
+              </li>
+              <li>
+                <strong>异常反馈闭环：</strong
+                >在异常工况下联动视觉红光闪烁和手柄震动，让数据异常转化为即时体感提示。
+              </li>
+            </ol>
+            <div class="evidence">
+              <div><b>Unity 3D</b><span>场景、装配体与交互逻辑</span></div>
+              <div>
+                <b>XR Interaction Toolkit</b
+                ><span>抓取、移动、拆分与手柄输入</span>
+              </div>
+              <div><b>Meta Quest 3</b><span>VR 真机交互目标平台</span></div>
+            </div>
+          </section>
+          <section id="evidence">
+            <span class="num">04</span>
+            <h2>公开证据与边界</h2>
+            <p>
+              GitHub 仓库公开了
+              `ChartController`、`InteractPoint`、`SimpleVRHandController`
+              等交互脚本，可验证图表控制、交互点与 VR 手柄相关实现。
+            </p>
+            <div class="actions">
+              <a
+                class="btn"
+                href="https://github.com/CYY-0217/VR_project"
+                target="_blank"
+                >查看 VR_project 仓库 ↗</a
+              >
+            </div>
+            <p>
+              <strong>边界说明：</strong
+              >本页基于个人工作总结和开发步骤记录整理。PINNs
+              的性能与节能论证属于项目整体方案；未将全部模型研发归为个人贡献。完整
+              Unity 工程、实验资产与获奖证书尚未公开。
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrap">陈韵韵 · Selected Project 01</div>
+    </footer>
+  </body>
+</html>
