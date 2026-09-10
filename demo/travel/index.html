@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Wanderlogue 将散落的旅行照片与见闻，编排成可探索、可分享的互动旅行杂志。">
+  <meta name="theme-color" content="#edf4ef">
+  <title>Wanderlogue｜把旅行变成一本杂志</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="nordic" data-focus="story" data-density="full">
+  <header class="site-header">
+    <a class="wordmark" href="#top">WANDERLOGUE <span>β</span></a>
+    <nav aria-label="主导航"><a href="#studio">生成</a><a href="#atlas">路线</a><a href="#journal">成刊</a><a href="#learn">见闻</a></nav>
+    <button class="menu-button" type="button" aria-label="展开导航" aria-expanded="false">＋</button>
+  </header>
+
+  <main id="top">
+    <section class="product-hero">
+      <div class="hero-copy">
+        <p class="overline">TRAVEL MEMORY EDITOR · 作品原型 01</p>
+        <h1>把走过的路，<br>变成一本<span>会回应</span>你的杂志。</h1>
+        <p class="hero-lead">照片、路线、吐槽与路边的问题，不再散落在相册和备忘录里。Wanderlogue 让每一次旅行拥有时间、地点、知识与叙事。</p>
+        <a class="primary-link" href="#studio">打开编排器 <span>↓</span></a>
+      </div>
+      <figure class="hero-image">
+        <img src="media/IMG_6155.jpg" alt="青海湖畔的高原公路与低云">
+        <figcaption><b>ISSUE 01</b><span>海拉尔 → 西宁</span><span>18 DAYS · 2026</span></figcaption>
+      </figure>
+      <aside class="hero-index"><span>01</span><p>真实行程</p><span>02</span><p>杂志编排</p><span>03</span><p>边走边学</p></aside>
+    </section>
+
+    <section class="problem-strip" aria-label="产品价值">
+      <p>1,551 张照片</p><i>＋</i><p>18 天碎片记录</p><i>＋</i><p>一条 GPS 路线</p><i>→</i><strong>一本属于你的旅行杂志</strong>
+    </section>
+
+    <section class="studio" id="studio">
+      <header class="section-heading"><p class="overline">LIVE COMPOSER / 交互式编排</p><h2>同一段旅程，<br>按你的方式讲述。</h2><p>选择阅读偏好，下面的成刊会即时调整视觉与信息层级。</p></header>
+      <div class="composer">
+        <fieldset><legend>01 · 杂志气质</legend><div class="segmented" data-control="theme"><button type="button" data-value="nordic" aria-pressed="true">北欧清新</button><button type="button" data-value="paper" aria-pressed="false">纸本纪实</button><button type="button" data-value="night" aria-pressed="false">夜读模式</button></div></fieldset>
+        <fieldset><legend>02 · 阅读重点</legend><div class="segmented" data-control="focus"><button type="button" data-value="story" aria-pressed="true">故事</button><button type="button" data-value="landscape" aria-pressed="false">地貌</button><button type="button" data-value="knowledge" aria-pressed="false">见闻</button></div></fieldset>
+        <fieldset><legend>03 · 内容密度</legend><div class="segmented" data-control="density"><button type="button" data-value="full" aria-pressed="true">完整成刊</button><button type="button" data-value="compact" aria-pressed="false">快速翻阅</button></div></fieldset>
+        <button class="compose-button" id="composeButton" type="button">重新编排杂志 <span>↗</span></button>
+      </div>
+      <div class="compose-status" id="composeStatus" aria-live="polite"><span></span><p><b>当前版本</b><br>北欧清新 · 故事优先 · 完整成刊</p></div>
+    </section>
+
+    <section class="issue-cover" id="issue">
+      <div class="cover-kicker"><span>WANDERLOGUE</span><span>VOL. 01</span></div>
+      <div class="cover-title"><p>08.10—08.27</p><h2>沿着地貌<br>向西</h2><p>一名女大学生与家人的十八天公路日志</p></div>
+      <div class="cover-stats"><div><b>18</b><span>天</span></div><div><b>9,000+</b><span>公里表数</span></div><div><b>5</b><span>种地貌</span></div></div>
+    </section>
+
+    <section class="atlas" id="atlas">
+      <header class="section-heading inverse"><p class="overline">ROUTE ATLAS / 动态路线</p><h2>从雨里的草原，<br>一路开到高原湖泊。</h2></header>
+      <div class="atlas-shell">
+        <div class="map-panel">
+          <svg viewBox="0 0 980 540" class="route-map" role="img" aria-label="海拉尔到西宁的18天旅行路线">
+            <path class="map-land" d="M45 78Q150 25 250 83T455 71 650 115 865 72L945 130 900 240 770 265 690 350 520 380 425 455 245 485 70 440Z"/>
+            <path class="map-lake" d="M729 81q54-28 88 10t-28 39q-55 2-60-49M157 430q42-16 68 9t-20 28q-42 5-48-37"/>
+            <g class="map-mountains"><path d="M560 310l32-55 32 55zM600 310l42-76 48 76zM187 407l30-48 28 48z"/></g>
+            <g class="map-grass"><path d="M760 145q8-24 16 0m-8 0v25M798 150q8-28 16 0m-8 0v25M835 145q8-22 16 0m-8 0v24"/></g>
+            <g class="map-dunes"><path d="M280 415q55-55 110 0 55-55 110 0"/></g>
+            <path class="route-line" d="M836 119 C900 170 800 210 735 195 C690 185 650 235 620 282 C580 315 520 330 468 340 C420 350 400 380 360 405 C315 428 260 438 215 450 C190 458 170 465 150 470"/>
+            <g id="mapStops"></g>
+            <g id="mapCar" class="map-car"><rect x="-18" y="-10" width="36" height="18" rx="3"/><path d="M-10-10l8-10h14l8 10"/><circle cx="-10" cy="10" r="5"/><circle cx="12" cy="10" r="5"/></g>
+          </svg>
+          <div class="map-legend"><span><i class="grass-key"></i>草原</span><span><i class="mountain-key"></i>山地</span><span><i class="sand-key"></i>沙漠</span><span><i class="lake-key"></i>湖泊</span></div>
+        </div>
+        <article class="route-detail" id="routeDetail"></article>
+      </div>
+      <div class="day-nav" id="dayNav" aria-label="选择旅行日期"></div>
+    </section>
+
+    <section class="journal" id="journal">
+      <header class="journal-intro"><p class="overline">THE FINISHED ISSUE / 示例成刊</p><h2>五次地貌转场，<br>十八天真实发生。</h2><p>没有把每一站都写成“绝美”。走错、失望、疲惫和突然懂了一件事，同样值得被收进旅行。</p></header>
+      <div id="chapterList"></div>
+    </section>
+
+    <section class="learning" id="learn">
+      <header class="section-heading inverse"><p class="overline">MEMORY, EXPANDED / 回忆增益</p><h2>看见以后，<br>再多知道一点。</h2><p>知识不是百科插播，而是从用户当时拍下的问题出发。</p></header>
+      <div class="learning-layout">
+        <div class="learning-nav" id="learningNav"></div>
+        <article class="learning-story" id="learningStory"></article>
+      </div>
+    </section>
+
+    <section class="product-story">
+      <p class="overline">FROM MEMORY TO PRODUCT</p>
+      <h2>不是替用户写一篇漂亮作文，<br>而是帮助他们认出：<br><span>这就是我的旅行。</span></h2>
+      <div class="product-points"><article><b>01</b><h3>自动整理</h3><p>按时间、位置与地貌，将相册和碎片笔记组织成可靠时间轴。</p></article><article><b>02</b><h3>保留口吻</h3><p>不抹掉吐槽、失望与家庭互动，让生成内容仍然属于本人。</p></article><article><b>03</b><h3>拓展见闻</h3><p>从照片中的植物、建筑和地质发问，让回忆过程产生新收获。</p></article><article><b>04</b><h3>一键成刊</h3><p>输出互动网页、长图或纪念册，兼顾私人保存与公开分享。</p></article></div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox"><button type="button" aria-label="关闭图片">×</button><img alt="旅行照片大图"><p></p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite">杂志已重新编排</div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
