@@ -5,145 +5,187 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="陈韵韵的个人作品集：核工程、数学、AI Agent、系统架构与 Vibe Coding。"
+      content="陈韵韵的个人作品集：专业工程与 XR、AI 与个人成长、生活决策工具、互动叙事与内容。"
     />
     <title>陈韵韵｜规划型构建者</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="magazine.css" />
   </head>
-  <body>
+  <body class="portfolio-home" id="top">
+    <a class="skip-link" href="#work">跳到项目</a>
     <header class="header">
       <div class="wrap">
-        <a class="brand" href="./"
-          ><span class="mark">CY</span
-          ><span
-            ><strong>陈韵韵</strong><small>PORTFOLIO / 2026</small></span
-          ></a
-        >
-        <nav class="nav">
-          <a href="#work">项目</a><a href="#method">方法</a
-          ><a href="#review">复盘</a><a href="#contact">联系</a>
-        </nav>
-        <a class="github" href="https://github.com/CYY-0217" target="_blank"
-          >GitHub ↗</a
-        >
+        <a class="brand" href="#top" aria-label="陈韵韵，返回顶部"><span class="mark">CY</span><span><strong>陈韵韵</strong><small>个人作品集</small></span></a>
+        <nav class="nav" aria-label="主导航"><a href="#work">作品</a><a href="#method">工作方法</a><a href="#review">阶段复盘</a></nav>
+        <a class="github" href="https://github.com/CYY-0217" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <details class="mobile-menu">
+          <summary>导航 <span aria-hidden="true">＋</span></summary>
+          <nav aria-label="手机主导航"><a href="#work">浏览作品</a><a href="#method">工作方法</a><a href="#review">阶段复盘</a><a href="https://github.com/CYY-0217" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+        </details>
       </div>
     </header>
     <main>
-      <section class="editorial-hero wrap">
-        <div class="hero-number">NO. 01</div>
+      <section class="editorial-hero wrap" aria-labelledby="intro-title">
         <div class="hero-main">
-          <span class="kicker">Planner · Builder · Explorer</span>
-          <h1>陈韵韵</h1>
-          <p class="hero-degree">
-            中山大学本科生｜核工程与核技术 × 数学与应用数学
-          </p>
-          <p class="hero-statement">
-            我习惯先看清目标与约束，再组织资源、拆解路径，把模糊想法推进为可运行、可验证、可复盘的系统。
-          </p>
-          <div class="actions">
-            <a class="btn" href="#work">翻阅作品 ↓</a
-            ><a
-              class="btn secondary"
-              href="https://github.com/CYY-0217"
-              target="_blank"
-              >GitHub ↗</a
-            >
-          </div>
+          <p class="hero-context">核工程与核技术 × 数学与应用数学</p>
+          <h1 id="intro-title">陈韵韵</h1>
+          <p class="hero-statement">把想法做成<br />可以使用的系统。</p>
+          <p class="hero-intro">中山大学本科生。关注 AI Agent 与系统架构，也在用 Unity XR 和 AI 协作开发，把专业问题与日常想法变成可体验的作品。</p>
+          <div class="actions"><a class="btn" href="#work">浏览我的作品 <span aria-hidden="true">↓</span></a><a class="hero-text-link" href="#method">了解我的工作方法</a></div>
+          <div class="hero-directions"><span>专业工程</span><span>AI 产品</span><span>互动网页</span></div>
         </div>
-        <aside class="hero-profile">
-          <div class="profile-heading">
-            <span>ABOUT / 01</span>
-            <b>规划型构建者</b>
-          </div>
-          <p class="profile-intro">
-            我是陈韵韵，中山大学核工程与核技术、数学与应用数学专业本科生。关注
-            AI Agent 与系统架构，也在用 Vibe Coding
-            将想法快速变成可以体验、验证和继续迭代的产品。
-          </p>
-          <div class="profile-focus">
-            <div><small>FOCUS</small><strong>AI Agent<br />系统架构</strong></div>
-            <div><small>PRACTICE</small><strong>Unity XR<br />Vibe Coding</strong></div>
-          </div>
-          <p class="profile-note">
-            从工程物理与数学训练出发，寻找复杂技术真正进入现实场景的路径。
-          </p>
-        </aside>
+        <a class="hero-project" href="projects/fusion-vr/" aria-label="查看智探新能，聚变托卡马克 VR 系统案例">
+          <div class="hero-project-heading"><span>代表作品</span><span class="hero-project-type">Unity XR</span></div>
+          <div class="model-stage"><img src="assets/tokamak-model.png" alt="托卡马克内部结构模型，标注线圈、真空室和支撑框架" width="1200" height="900" fetchpriority="high" /></div>
+          <div class="hero-project-copy"><div><span>智探新能</span><h2>在空间里理解<br />一台聚变装置。</h2></div><span class="hero-project-open" aria-hidden="true">↗</span></div>
+          <p>装置透视 / 部件解构 / 诊断图表</p>
+        </a>
       </section>
+      <div class="manifesto"><div class="wrap"><p>从一个问题开始，<br class="mobile-break" />让每一次构建都有下一步。</p><a href="#work">探索六个项目 <span aria-hidden="true">↓</span></a></div></div>
 
-      <section class="manifesto">
-        <div class="wrap">
-          <span>01 规划</span><i>目标 → 约束 → 路径</i><span>02 构建</span
-          ><i>原型 → 测试 → 交付</i><span>03 复盘</span
-          ><i>证据 → 边界 → 下一步</i>
-        </div>
-      </section>
-
-      <section class="section wrap" id="work">
+      <section class="section wrap" id="work" aria-labelledby="work-title">
         <div class="mag-head">
-          <span class="folio">FEATURED / 04</span>
-          <h2>我正在构建的<br /><em>四种系统</em></h2>
-          <p>
-            从托卡马克数字孪生，到消费决策、个人纪律与旅行记忆。主题不同，但都在回答同一件事：怎样把复杂信息组织成能被理解和使用的体验。
-          </p>
+          <span class="folio">作品索引</span>
+          <h2 id="work-title">四个方向，<br />持续构建。</h2>
+          <p>这里收录六个项目：有专业工程探索，也有从自己生活里长出来的小工具。点击分类快速浏览，或进入项目了解具体实现。</p>
         </div>
-        <div class="editorial-grid">
-          <a class="story story-fusion" href="projects/fusion-vr/"
-            ><figure>
-              <img src="assets/tokamak-model.png" alt="托卡马克内部结构模型" />
-            </figure>
-            <div>
-              <small>01 / LEAD STORY</small>
-              <h3>智探新能</h3>
-              <p>
-                聚变托卡马克 VR 系统：三层架构、装置透视、部件解构与异常反馈。
-              </p>
-              <b>查看我的系统工作 →</b>
-            </div></a
-          >
-          <a class="story story-spend" href="projects/spend-decision/"
-            ><figure>
-              <img src="assets/spend-cover.png" alt="我想花钱消费决策工具" />
-            </figure>
-            <div>
-              <small>02 / PRODUCT</small>
-              <h3>我想花钱</h3>
-              <p>用一次投票、双榜单和购买后记，把冲动消费变成决策闭环。</p>
-              <b>打开产品案例 →</b>
-            </div></a
-          >
-          <a class="story story-travel" href="projects/travel-journal/"
-            ><figure>
-              <img src="assets/travel-cover.jpg" alt="青海湖高原公路旅行" />
-            </figure>
-            <div>
-              <small>03 / VIBE CODING</small>
-              <h3>Wanderlogue</h3>
-              <p>
-                把 18 天、9,000 公里和 1,551 张照片编排成一份可交互旅行杂志。
-              </p>
-              <b>进入旅行日志 →</b>
-            </div></a
-          >
-          <a class="story story-discipline" href="projects/discipline/"
-            ><figure class="number-visual">
-              <span>50</span><small>DAYS</small>
-            </figure>
-            <div>
-              <small>04 / SMALL EXPERIMENT</small>
-              <h3>50 Day Discipline</h3>
-              <p>以有限周期和每日行动设计低摩擦的个人自律记录。</p>
-              <b>查看轻量实验 →</b>
-            </div></a
-          >
-        </div>
+        <nav class="project-index" aria-label="按项目方向浏览">
+          <a href="#engineering" data-category="engineering">专业工程与 XR <small>1</small></a>
+          <a href="#ai-growth" data-category="ai-growth">AI 与个人成长 <small>3</small></a>
+          <a href="#everyday" data-category="everyday">生活决策工具 <small>1</small></a>
+          <a href="#storytelling" data-category="storytelling">互动叙事与内容 <small>1</small></a>
+        </nav>
+
+        <section class="project-group" id="engineering" aria-labelledby="engineering-title">
+          <header class="group-heading">
+            <span class="folio">专业场景</span>
+            <h3 id="engineering-title">专业工程与 XR</h3>
+            <p>让专业数据与复杂装置变得可观察、可操作。</p>
+          </header>
+          <div class="group-projects">
+            <a class="story story-fusion story-wide" href="projects/fusion-vr/">
+              <figure><img src="assets/tokamak-model.png" alt="托卡马克内部结构模型" loading="lazy" /></figure>
+              <div>
+                <small>系统架构与 XR 交互</small>
+                <h4>智探新能</h4>
+                <p>聚变托卡马克 VR 系统。通过装置透视、部件解构、诊断图表和异常反馈，连接科学数据与空间理解。</p>
+                <div class="story-footer">
+                  <span class="project-status">项目案例 · 公开交互脚本</span>
+                  <b><span>查看我的系统工作</span><span class="story-arrow" aria-hidden="true">→</span></b>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="project-group" id="ai-growth" aria-labelledby="ai-growth-title">
+          <header class="group-heading">
+            <span class="folio">从行动到成长</span>
+            <h3 id="ai-growth-title">AI 与个人成长</h3>
+            <p>从记录行动，到练习成长，再到推进一个模糊的想法。</p>
+          </header>
+          <div class="group-projects growth-projects">
+            <a class="story story-growlab" href="https://github.com/CYY-0217/growlab" target="_blank" rel="noopener noreferrer">
+              <figure class="growth-visual" aria-hidden="true">
+                <span class="visual-caption">个人成长实验室</span>
+                <strong>GrowLab</strong>
+                <div class="visual-footer">
+                  <div class="growth-loop"><span>规划</span><i>→</i><span>练习</span><i>→</i><span>行动</span><i>→</i><span>复盘</span></div>
+                  <span class="visual-footnote">把「知道」变成「会用」</span>
+                </div>
+              </figure>
+              <div>
+                <small>成长与行动 Agent</small>
+                <h4>GrowLab</h4>
+                <p>在情境剧场里练习，在现实小实验中验证。把规划、自律、探索与成长档案连成一条行动闭环。</p>
+                <div class="story-footer">
+                  <span class="project-status">本地应用 · 公开源代码</span>
+                  <b><span>查看个人成长实验室</span><span class="story-arrow" aria-hidden="true">↗</span></b>
+                </div>
+              </div>
+            </a>
+            <a class="story story-incubator" href="https://github.com/CYY-0217/idea-incubator" target="_blank" rel="noopener noreferrer">
+              <figure class="idea-visual" aria-hidden="true">
+                <span class="visual-caption">想法孵化器</span>
+                <strong>一个念头，<br />慢慢成形。</strong>
+                <div class="visual-footer"><div class="idea-timeline"><span><small>一个念头</small>种子</span><i>→</i><span><small>换种视角</small>展开</span><i>→</i><span><small>第一步</small>推进</span></div></div>
+              </figure>
+              <div>
+                <small>AI 想法管理工具</small>
+                <h4>Idea Incubator</h4>
+                <p>把关键词、想法与对话展开为结构化方案。通过 AI 追问、演化时间线、看板和图谱，让想法有迹可循。</p>
+                <div class="story-footer">
+                  <span class="project-status">PC 本地应用 · V1.1</span>
+                  <b><span>查看想法孵化器</span><span class="story-arrow" aria-hidden="true">↗</span></b>
+                </div>
+              </div>
+            </a>
+            <a class="story story-discipline story-compact" href="projects/discipline/">
+              <figure class="number-visual" aria-hidden="true"><span>50</span><small>天</small></figure>
+              <div>
+                <small>GrowLab 的早期探索</small>
+                <h4>50 Day Discipline</h4>
+                <p>一个以 50 天为周期的习惯打卡器：每日行动、专注计时与复盘。它是 GrowLab 的前身，保留从轻量工具走向成长 Agent 的探索起点。</p>
+                <div class="story-footer">
+                  <span class="project-status">早期原型 · 单页网页</span>
+                  <b><span>查看早期自律实验</span><span class="story-arrow" aria-hidden="true">→</span></b>
+                </div>
+              </div>
+            </a>
+          </div>
+          <p class="evolution-note"><span>项目演进</span>50 Day Discipline <i>→</i> GrowLab：从记录每天做了什么，到练习、行动与回访复盘。</p>
+        </section>
+
+        <section class="project-group" id="everyday" aria-labelledby="everyday-title">
+          <header class="group-heading">
+            <span class="folio">日常问题</span>
+            <h3 id="everyday-title">生活决策工具</h3>
+            <p>把日常选择中的犹豫，转化为有反馈的决策流程。</p>
+          </header>
+          <div class="group-projects">
+            <a class="story story-spend story-wide" href="projects/spend-decision/">
+              <figure><img src="assets/spend-cover.png" alt="我想花钱消费决策工具界面" loading="lazy" /></figure>
+              <div>
+                <small>消费决策与轻社交</small>
+                <h4>我想花钱</h4>
+                <p>发布想买的东西，邀请朋友投票，再用购买后记回答「真香还是踩坑」。让一次购物变成有始有终的决策闭环。</p>
+                <div class="story-footer">
+                  <span class="project-status">小程序原型 · 浏览器本地演示</span>
+                  <b><span>打开产品案例与演示</span><span class="story-arrow" aria-hidden="true">→</span></b>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="project-group" id="storytelling" aria-labelledby="storytelling-title">
+          <header class="group-heading">
+            <span class="folio">真实素材</span>
+            <h3 id="storytelling-title">互动叙事与内容</h3>
+            <p>让散落的素材有结构，让一段经历可以被探索。</p>
+          </header>
+          <div class="group-projects">
+            <a class="story story-travel story-wide" href="projects/travel-journal/">
+              <figure><img src="assets/travel-cover.jpg" alt="青海湖高原公路旅行" loading="lazy" /></figure>
+              <div>
+                <small>互动旅行杂志</small>
+                <h4>Wanderlogue</h4>
+                <p>从 18 天、9,000 多公里和 1,551 张原始照片中整理路线、见闻与地貌叙事，编排成一份可交互旅行杂志。</p>
+                <div class="story-footer">
+                  <span class="project-status">响应式网页 · 在线互动成刊</span>
+                  <b><span>进入旅行日志</span><span class="story-arrow" aria-hidden="true">→</span></b>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
       </section>
 
       <section class="section method-band" id="method">
         <div class="wrap">
           <div class="mag-head inverse">
-            <span class="folio">OPERATING SYSTEM</span>
-            <h2>规划不是把未来写满，<br /><em>而是持续减少不确定。</em></h2>
+            <span class="folio">工作方法</span>
+            <h2>把一个想法，<br />推进到可验证。</h2>
             <p>
               我的性格偏向目标驱动和结构化推进。比起等待完美条件，我更愿意先定义问题、建立验证路径，再根据结果调整方向。
             </p>
@@ -178,12 +220,12 @@
 
       <section class="section wrap" id="review">
         <div class="review-title">
-          <span class="folio">PERSONAL REVIEW</span>
-          <h2>本阶段，我如何<br />审视自己的成长。</h2>
+          <span class="folio">阶段复盘</span>
+          <h2>构建之后，<br />再回头看。</h2>
         </div>
         <div class="review-layout">
           <article class="review-lead">
-            <span>NOW</span>
+            <span>当前的思考</span>
             <h3>从会使用工具，走向能设计系统。</h3>
             <p>
               当前优势是快速理解需求、主动搭建结构并推动原型落地；需要继续补足的是更扎实的代码工程能力、定量评估方法和长期项目维护经验。
@@ -221,30 +263,60 @@
         </div>
       </section>
 
-      <section class="identity-strip">
-        <div class="wrap">
-          <p>NUCLEAR ENGINEERING</p>
-          <p>APPLIED MATHEMATICS</p>
-          <p>AI AGENT</p>
-          <p>SYSTEM ARCHITECTURE</p>
-        </div>
-      </section>
     </main>
     <section class="contact" id="contact">
       <div class="wrap">
         <div>
-          <span class="kicker">NEXT CONVERSATION</span>
+          <span class="kicker">保持联系</span>
           <h2>讨论一个值得<br />被做成的想法。</h2>
         </div>
         <div class="contact-links">
           <a href="https://github.com/CYY-0217" target="_blank"
-            >GitHub / CYY-0217 ↗</a
+            >在 GitHub 看我的后续更新 ↗</a
           ><span>中山大学 · 陈韵韵</span>
         </div>
       </div>
     </section>
     <footer class="footer">
-      <div class="wrap">© 2026 CHEN YUNYUN · PLANNED, BUILT, REVIEWED.</div>
+      <div class="wrap"><span>© 2026 陈韵韵</span><a href="#top">返回顶部 ↑</a></div>
     </footer>
+    <script>
+      (() => {
+        const menu = document.querySelector('.mobile-menu');
+        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && menu.open) {
+            menu.open = false;
+            menu.querySelector('summary').focus();
+          }
+        });
+        document.addEventListener('click', event => {
+          if (menu.open && !menu.contains(event.target)) menu.open = false;
+        });
+        const links = [...document.querySelectorAll('[data-category]')];
+        const groups = [...document.querySelectorAll('.project-group')];
+        const nav = document.querySelector('.project-index');
+        let pending = false;
+        function updateCategory() {
+          const threshold = nav.getBoundingClientRect().bottom + 35;
+          let current = groups[0].id;
+          groups.forEach(group => { if (group.getBoundingClientRect().top <= threshold) current = group.id; });
+          links.forEach(link => {
+            const active = link.dataset.category === current;
+            link.classList.toggle('is-active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+          });
+          pending = false;
+        }
+        function scheduleUpdate() {
+          if (!pending) { pending = true; requestAnimationFrame(updateCategory); }
+        }
+        window.addEventListener('scroll', scheduleUpdate, { passive: true });
+        window.addEventListener('resize', scheduleUpdate);
+        window.addEventListener('hashchange', scheduleUpdate);
+        updateCategory();
+      })();
+    </script>
   </body>
 </html>
